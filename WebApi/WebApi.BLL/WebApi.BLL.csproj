@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi.BLL.Infra\WebApi.BLL.Infra.csproj" />
+    <ProjectReference Include="..\WebApi.DAL.Infra\WebApi.DAL.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
