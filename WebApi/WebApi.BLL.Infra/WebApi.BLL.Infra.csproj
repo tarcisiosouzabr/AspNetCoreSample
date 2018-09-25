@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebApi.DAL.Infra\WebApi.DAL.Infra.csproj" />
+    <ProjectReference Include="..\WebApi.Entities\WebApi.Entities.csproj" />
   </ItemGroup>
 
 </Project>

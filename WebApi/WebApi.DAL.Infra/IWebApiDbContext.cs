@@ -14,6 +14,7 @@ namespace WebApi.DAL.Infra
         Task Delete<TEntity>(TEntity entity) where TEntity : class; 
         #endregion
 
-        IQueryable<User> UserQuery { get; }
+        IQueryable<Person> PersonQuery { get; }
+        IQueryable<Animal> AnimalQuery { get; }
     }
 }

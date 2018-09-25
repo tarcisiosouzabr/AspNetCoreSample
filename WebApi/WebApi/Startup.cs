@@ -14,6 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using WebApi.BLL.Infra;
 using WebApi.BLL;
 using WebApi.UoWs;
+using WebApi.DAL.Infra.Repositories;
+using WebApi.DAL.Repositories;
 
 namespace WebApi
 {
@@ -35,11 +37,16 @@ namespace WebApi
             services.AddMvc();
 
             #region BLL's
-            services.AddScoped<IUserBLL, UserBLL>();
+            services.AddScoped<IPersonBLL, PersonBLL>();
+            services.AddScoped<IAnimalBLL, AnimalBLL>();
             #endregion
-
+            #region Repositories
+            services.AddScoped<IAnimalRepository, AnimalRepository>();
+            services.AddScoped<IPersonRepository, PersonRepository>(); 
+            #endregion
             #region UoW's
             services.AddScoped<AnimalUoW, AnimalUoW>(); 
+            services.AddScoped<PersonUoW, PersonUoW>();
             #endregion
         }
 

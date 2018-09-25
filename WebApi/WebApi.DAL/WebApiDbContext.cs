@@ -42,7 +42,10 @@ namespace WebApi.DAL
             });
         }
 
-        public DbSet<User> User { get; set; }
-        public IQueryable<User> UserQuery { get { return UserQuery; } }
+        public DbSet<Animal> Animal { get; set; }
+        public IQueryable<Animal> AnimalQuery { get { return AnimalQuery; } }
+
+        public DbSet<Person> Person { get; set; }
+        public IQueryable<Person> PersonQuery { get { return PersonQuery; } }
     }
 }

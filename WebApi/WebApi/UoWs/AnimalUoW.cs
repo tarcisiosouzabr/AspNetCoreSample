@@ -1,11 +1,14 @@
-﻿using WebApi.DAL.Infra;
+﻿using WebApi.BLL.Infra;
+using WebApi.DAL.Infra;
 
 namespace WebApi.UoWs
 {
     public class AnimalUoW : UoWBase
     {
-        public AnimalUoW(IWebApiDbContext dbContext) : base(dbContext)
+        public IAnimalBLL AnimalBLL { get; set; }
+        public AnimalUoW(IWebApiDbContext dbContext, IAnimalBLL animalBLL) : base(dbContext)
         {
+            AnimalBLL = animalBLL;
         }
     }
 }
